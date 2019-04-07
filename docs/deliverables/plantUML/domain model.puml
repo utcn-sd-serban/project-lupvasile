@@ -1,0 +1,35 @@
+@startuml
+'hide members
+hide methods
+hide circle
+skinparam monochrome true
+skinparam shadowing false
+class Coder
+class Company
+class Event
+
+Company "1" *-- "*" Event : organizes
+Coder "1" - "*" Event : participates
+
+class Coder{
+    firstName
+    lastName
+    email
+    linkedin
+}
+
+class Company{
+    name
+    address
+    email
+    website
+}
+
+class Event{
+    name
+    dateOfEvent
+    address
+    maxNrOfParticipants
+}
+
+@enduml
